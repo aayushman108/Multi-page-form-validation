@@ -224,3 +224,18 @@ input{
     margin-bottom: 0.5em;
 }
 
+/*step-4*/
+
+.file{
+    position: relative;
+    top: 10%;
+    left: 10%;
+    margin-bottom: 2em;
+
+}
+ 
+.file label{
+    margin-bottom: 0.5em;
+}
+
+
