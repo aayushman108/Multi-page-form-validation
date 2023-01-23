@@ -1,0 +1,145 @@
+/*For the document*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*For main box*/
+.container{
+    width: 96vw;
+    max-width: 1200px;
+    margin:auto;
+    margin-top: 2vh;
+    height: 96vh;
+    background-color: rgb(8, 8, 50);
+    position: relative;
+}
+
+#preBtn{
+    position: absolute;
+    bottom: 1em;
+    left: 10%;
+    width: 39%;
+    line-height: 2em;
+    text-align: center;
+    border:none;
+    border-radius: 0.3em;
+}
+
+#nxtBtn{
+    position:absolute;
+    bottom: 1em;
+    right: 10%;
+    width:39%;
+    line-height: 2em;
+    text-align: center;
+    border:none;
+    border-radius: 0.3em;
+}
+
+/*For the item-in-steps inside the main box*/
+.step{
+    position: absolute;
+    top: 12%;
+    left: 100px;
+    background-color: rgb(93, 165, 165);
+    width: 1000px;
+    height: 80%;
+}
+
+@media screen and (max-width: 1200px) {
+    .step{
+        width:96%;
+        left: 2%;
+    }   
+}
+
+/* For all headings*/
+h2{
+    text-align: center;
+    margin-top: 2em;
+}
+ 
+/* For all labels*/
+label{
+    display: block;
+    font-size: 18px;
+}
+
+/*For all inputs*/
+input{
+    display: block;
+}
+ 
+/*For step-0*/
+#step-0 input{
+    width: 70%;
+    margin: auto;
+    position: relative;
+    top: 20%;
+    line-height: 2.5em;
+    border-radius: 0.3em;
+    border: none;
+    margin-bottom: 1em;
+    padding: 0 1em;
+}
+
+#step-0 label{
+    margin-left: 15%;
+    position: relative;
+    top: 20%;
+    margin-bottom: 0.5em;
+}
+
+/*For step-1*/
+#column{   
+    width: 90%;
+    margin:auto;
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+    justify-content: space-between;
+    
+}
+
+.col{
+    flex: 50%;
+}
+
+.col label{
+    margin-bottom: 0.5em;
+}
+
+.col input{
+    width:90%;
+    line-height: 2.5em;
+    border-radius: 0.3em;
+    border: none;
+    margin-bottom: 1em;
+    padding: 0 1em;
+
+}
+
+#right input{
+    float: right;
+}
+
+#right label{
+    margin-left: 10%;
+}
+
+#left{
+    border-right: 2px solid rgba(187, 179, 179, 0.5);
+}
+
+/*For step-2*/
+
+
+
+
+
+ 
+
+
