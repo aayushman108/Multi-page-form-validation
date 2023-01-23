@@ -22,9 +22,9 @@
                 <input type="number" id="pan-number" name="pan-number">
             </div>
 
-            <div class="step" id="step-1" style="display: block">
+            <div class="step" id="step-1" style="display: none">
                 <h2>ADDRESS DETAIL</h2>
-                <div id="column">
+                <div class="column">
                     <div class="col" id="left">
                         <label for="country">Country of Residence</label>
                         <input type="text" id="country" name="country">
@@ -32,7 +32,6 @@
                         <input type="text" id="district" name="district">
                         <label for="ward">Ward No.</label>
                         <input type="text" id="ward" name="ward">
-
                     </div>
 
                     <div class="col" id="right">
@@ -42,18 +41,26 @@
                         <input type="text" id="municipality" name="municipality">
                         <label for="street">Street/Tole</label>
                         <input type="text" id="street" name="street">
-
                     </div>
-
-
                 </div>
-
-
             </div>
 
-            <div class="step" id="step-2" style="display: none">
+            <div class="step" id="step-2" style="display: block">
                 <h2>BANK DETAIL</h2>
-
+                <label for="bank">Bank</label>
+                <input type="text" id="bank" name="bank">
+                <div class="column-2">
+                    <div class="col-2" id="left-2">
+                        <label for="branch">Branch</label>
+                        <input type="text" id="branch" name="branch">
+                    </div>   
+                    <div class="col-2" id="right-2">
+                        <label for="account-type">Account Type</label>
+                        <input type="text" id="account-type" name="account-type">
+                    </div> 
+                </div>
+                <label for="account-number">Account Number</label>
+                <input type="number" id="account-number" name="account-number">
             </div>
 
             <div class="step" id="step-3" style="display: none">

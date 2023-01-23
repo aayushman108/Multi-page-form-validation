@@ -93,7 +93,7 @@ input{
 }
 
 /*For step-1*/
-#column{   
+.column{   
     width: 90%;
     margin:auto;
     margin-top: 10%;
@@ -135,11 +135,71 @@ input{
 }
 
 /*For step-2*/
+#step-2 input{
+    width: 80%;
+    margin:auto;
+    line-height: 2.5em;
+    border-radius: 0.3em;
+    border: none;
+    margin-bottom: 1em;
+    padding: 0 1em;    
+}
 
+#step-2 label{
+    margin-left: 10%;
+    margin-bottom: 0.5em;
+}
 
+.column-2{
+    display: flex;
+    flex-wrap:wrap;
+    width:86%; 
+    margin: auto;
+    padding:0 3%;
+    
+}
 
+#right-2 input{
+    float: right;
+}
 
+.col-2{
+    flex: 50%;
+}
 
- 
+#right-2 input{
+    width: 90%;
+}
+
+#left-2 input{
+    width: 90%;
+    float: left;
+    
+}
+
+ #left-2 label{
+    margin-left: 0;
+ }
+
+ #right-2 label{
+    margin-left: 10%;
+ }
+
+ #step-2 label{
+    position: relative;
+    top: 20%;
+
+ }
+
+ #step-2 input{
+    position: relative;
+    top: 20%;
+ }
+
+ #step-2 div{
+    position: relative;
+    top: 20%;
+    margin-bottom: 0.7em;
+ }
 
 
