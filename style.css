@@ -202,4 +202,25 @@ input{
     margin-bottom: 0.7em;
  }
 
+/*For step 3*/
+
+#step-3 input{
+    width: 80%;
+    margin: auto;
+    position:relative;
+    top: 30%;
+    line-height: 2.5em;
+    border-radius: 0.3em;
+    border: none;
+    margin-bottom: 1em;
+    padding: 0 1em; 
+}
+
+#step-3 label{
+    width: 80%;
+    margin: auto;
+    position:relative;
+    top: 30%; 
+    margin-bottom: 0.5em;
+}
 
