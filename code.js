@@ -43,3 +43,8 @@ function previousButton(event){
         steps[count+1].style.display='none';   
     }
 }
+
+//getting all inputs of the form
+const inputs= document.querySelectorAll("input");
+const inArray= Array.from(inputs);
+console.log(inArray);
