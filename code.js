@@ -1,7 +1,18 @@
+//Object for regex
+/*const obj ={
+    mobile-number: ;
+    email: ;
+    pan-number: ;
+    ward: ;
+    street: ;
+    account-number: ;
+    boid: ;
+}
+*/
+
 // get all steps of the form
 const steps= document.querySelectorAll(".step");
 let noOfSteps=steps.length;
-console.log(noOfSteps);
 let count=0;
 
 //accessing next and previous buttons
@@ -14,24 +25,21 @@ previous.addEventListener('click', previousButton);
 
 //function for next button
 function nextButton(event){
-    count++;
-    if(count>=noOfSteps){
-        return;
+    if(count< noOfSteps-1){
+        count++;
+        steps[count].style.display= 'block';
+        steps[count-1].style.display= 'none';
     }
-    steps[count-1].style.display="none";
-    steps[count].style.display="block";  
 }
 
 //function for previous button
 function previousButton(event){
-       count--;
-       if(count< 0){
+    if(count<=0){
         return;
-       }
-       steps[count+1].style.display='none';
-       steps[count].style.display='block';
-       if(count==0){
-       previous.style.backgroundColor='red';
-       }
-    
+    }
+    if(count> 0){
+        count--;
+        steps[count].style.display='block';
+        steps[count+1].style.display='none';   
+    }
 }

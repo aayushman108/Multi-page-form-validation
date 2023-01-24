@@ -114,7 +114,7 @@ input{
 }
 
 #left input{
-    float: left;
+    left: -5%;
 }
 
 #right input{
@@ -207,4 +207,7 @@ input{
     margin-bottom: 0.5em;
 }
 
-
+/*span*/
+span{
+    color: rgb(200, 7, 7);
+}
