@@ -1,14 +1,3 @@
-//Object for regex
-/*const obj ={
-    mobile-number: ;
-    email: ;
-    pan-number: ;
-    ward: ;
-    street: ;
-    account-number: ;
-    boid: ;
-}
-*/
 
 // get all steps of the form
 const steps= document.querySelectorAll(".step");
@@ -44,7 +33,50 @@ function previousButton(event){
     }
 }
 
+
+
+
+//Object for regex
+const pattern = {
+    mobileNumber: /^(\+977-|977-)?(98)\d{8}$/,
+    email:/^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
+    panNumber:/^\d{4}$/,
+    ward: /^\d{2}$/,
+    street:/^([a-z]+)(-\d{2})?$/i,
+    accountNumber:/^\d{12}$/,
+    boid:/^\d{13}$/
+};
+
 //getting all inputs of the form
 const inputs= document.querySelectorAll("input");
 const inArray= Array.from(inputs);
 console.log(inArray);
+
+//adding event listener to each inputs
+
+inArray.forEach(arrEvent);
+function arrEvent(inpt){
+    inpt.addEventListener('blur', (e)=>{
+        validate(e.target, pattern[e.target.attributes.name.value])
+    })
+}
+
+/*validation*/
+function validate(field, regex){
+    if(regex.test(field.value)){
+        field.classList.add("valid");
+    }else{
+        field.classList.add("invalid");
+    }
+}
+
+/*submit*/
+const button= document.getElementsByClassName("btn");
+button.addEventListener('submit', checkSubmit);
+
+function checkSubmit(event){
+    event.preventDefault();
+    
+
+}
+

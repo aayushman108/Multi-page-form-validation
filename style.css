@@ -211,3 +211,20 @@ input{
 span{
     color: rgb(200, 7, 7);
 }
+
+/*js*/
+.valid{
+    background-color: green;
+}
+
+.invlaid{
+    background-color: red;
+}
+
+/*submit*/
+.btn{
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    background-color: green;
+}
