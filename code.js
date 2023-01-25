@@ -44,7 +44,13 @@ const pattern = {
     ward: /^\d{2}$/,
     street:/^([a-z]+)(-\d{2})?$/i,
     accountNumber:/^\d{12}$/,
-    boid:/^\d{13}$/
+    boid:/^\d{13}$/,
+    district:/^[a-z ]+$/i,
+    state:/^[a-z ]+$/i,
+    municipality:/^[a-z ]+$/i,
+    street:/^[a-z ]+$/i,
+    bank:/^[a-z ]+$/i,
+    branch:/^[a-z ]+$/i
 };
 
 //getting all inputs of the form
@@ -56,7 +62,9 @@ const inArray= Array.from(inputs);
 inArray.forEach(arrEvent);
 function arrEvent(inpt){
     inpt.addEventListener('blur', (e)=>{
-        validate(e.target, pattern[e.target.attributes.name.value])
+        console.log(e.currentTarget);
+        console.log(e.currentTarget.attributes.name.value)
+        validate(e.currentTarget, pattern[e.currentTarget.attributes.name.value]);
     })
 }
 
@@ -69,24 +77,24 @@ function validate(field, regex){
     }
 }
 
-submit
+//submit
 let countCount=0;
-let button=document.getElementsByClassName("btn");
+const form= document.getElementById("fom");
 document.addEventListener('submit', checkSubmit);
 
 function checkSubmit(event){
     event.preventDefault();
-    button.classList.add('valid');
              
     for(let value of inArray){
         if(value.classList.contains("valid")){
             countCount++;
         }
     }
-
+    console.log(countCount);
     if(countCount== inArray.length){
-        button.submit();            
+        console.log(countCount);
+        form.document.getElementsByClassName("btn").submit();            
     }else{
-        button.classList.add("invalid");
+        document.getElementsByClassName("btn").classList.add("invalid");
     }
 }
