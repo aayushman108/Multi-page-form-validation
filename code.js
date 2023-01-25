@@ -63,13 +63,15 @@ inArray.forEach(arrEvent);
 function arrEvent(inpt){
     inpt.addEventListener('blur', (e)=>{
         console.log(e.currentTarget);
-        console.log(e.currentTarget.attributes.name.value)
+        console.log(e.currentTarget.attributes.name.value);
         validate(e.currentTarget, pattern[e.currentTarget.attributes.name.value]);
     })
 }
 
 //validation
 function validate(field, regex){
+    field.classList.remove("valid");
+    field.classList.remove("invalid");
     if(regex.test(field.value)){
         field.classList.add("valid");
     }else{
@@ -78,23 +80,19 @@ function validate(field, regex){
 }
 
 //submit
-let countCount=0;
-const form= document.getElementById("fom");
+
 document.addEventListener('submit', checkSubmit);
 
 function checkSubmit(event){
-    event.preventDefault();
-             
+    let countCount=0;        
     for(let value of inArray){
         if(value.classList.contains("valid")){
             countCount++;
         }
     }
-    console.log(countCount);
-    if(countCount== inArray.length){
-        console.log(countCount);
-        form.document.getElementsByClassName("btn").submit();            
-    }else{
-        document.getElementsByClassName("btn").classList.add("invalid");
+
+    if(countCount< inArray.length){
+        event.preventDefault();
+                   
     }
 }

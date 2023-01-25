@@ -237,12 +237,12 @@ span{
 }
 
 /*js*/
-input .valid{
-    background-color: green;
+.valid{
+    border:3px solid green;
 }
 
-input .invlaid{
-    background-color: red;
+ .invalid{
+    border:2px solid red;
 }
 
 /*submit*/
