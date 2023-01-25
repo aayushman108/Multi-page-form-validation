@@ -70,7 +70,7 @@ label{
 }
 
 /*For all inputs*/
-input{
+select,input{
     display: block;
     line-height: 2.5em;
     border-radius: 0.3em;
@@ -83,6 +83,14 @@ input{
 /*For step-0*/
 #step-0 input{
     width: 70%;
+    top: 20%;
+    margin-bottom: 1em;
+}
+
+#step-0 select{
+    position: relative;
+    width: 70%;
+    height: 2.5em;
     top: 20%;
     margin-bottom: 1em;
 }
@@ -101,7 +109,6 @@ input{
     flex-wrap: wrap;
     padding: 2em;
     justify-content: space-between;
-    
 }
 
 .col{
@@ -112,13 +119,23 @@ input{
     width:90%;
     margin-bottom: 1em;  
 }
+ 
+.col select{
+    width:90%;
+    height: 2.5em;
+    margin-bottom: 1em;  
+}
 
 #left input{
     left: -5%;
 }
 
+#left select{
+    left: -5%;
+}
+
 #right input{
-    float: right;
+    margin-left: 10%;
 }
 
 #right label{
@@ -136,6 +153,13 @@ input{
     top: 20%; 
 }
 
+#step-2 select{
+    width: 80%;
+    height: 2.5em;
+    margin-bottom: 1em; 
+    top: 20%;
+}
+
 #step-2 label{
     margin-left: 10%;
     top: 20%;
@@ -150,7 +174,7 @@ input{
     
 }
 
-#right-2 input{
+#right-2 select{
     float: right;
     width: 90%;
 }
@@ -213,11 +237,11 @@ span{
 }
 
 /*js*/
-.valid{
+input .valid{
     background-color: green;
 }
 
-.invlaid{
+input .invlaid{
     background-color: red;
 }
 

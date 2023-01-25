@@ -50,7 +50,6 @@ const pattern = {
 //getting all inputs of the form
 const inputs= document.querySelectorAll("input");
 const inArray= Array.from(inputs);
-console.log(inArray);
 
 //adding event listener to each inputs
 
@@ -61,7 +60,7 @@ function arrEvent(inpt){
     })
 }
 
-/*validation*/
+validation
 function validate(field, regex){
     if(regex.test(field.value)){
         field.classList.add("valid");
@@ -70,7 +69,7 @@ function validate(field, regex){
     }
 }
 
-/*submit*/
+submit
 let countCount=0;
 let button=document.getElementsByClassName("btn");
 document.addEventListener('submit', checkSubmit);
