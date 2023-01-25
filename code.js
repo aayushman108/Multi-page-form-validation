@@ -71,12 +71,23 @@ function validate(field, regex){
 }
 
 /*submit*/
-const button= document.getElementsByClassName("btn");
-button.addEventListener('submit', checkSubmit);
+let countCount=0;
+let button=document.getElementsByClassName("btn");
+document.addEventListener('submit', checkSubmit);
 
 function checkSubmit(event){
     event.preventDefault();
-    
+    button.classList.add('valid');
+             
+    for(let value of inArray){
+        if(value.classList.contains("valid")){
+            countCount++;
+        }
+    }
 
+    if(countCount== inArray.length){
+        button.submit();            
+    }else{
+        button.classList.add("invalid");
+    }
 }
-
