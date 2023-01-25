@@ -247,8 +247,8 @@ input .invlaid{
 
 /*submit*/
 .btn{
-    position: absolute;
-    bottom: 2em;
-    right: 2em;
+    position: relative;
+    margin-top: 30%;
+    height:2.5em;
     background-color: rgb(99, 106, 99);
 }

@@ -60,7 +60,7 @@ function arrEvent(inpt){
     })
 }
 
-validation
+//validation
 function validate(field, regex){
     if(regex.test(field.value)){
         field.classList.add("valid");
